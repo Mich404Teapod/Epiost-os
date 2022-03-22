@@ -3,21 +3,12 @@ CFLAGS  ?= -g -O2 -Wall -Wextra -pedantic -Wno-unused-parameter
 CFLAGS += -Isrc
 LDFLAGS += -L.
 
-TARGET   = kuroko
-OBJS     = $(patsubst %.c, %.o, $(filter-out src/kuroko.c,$(sort $(wildcard src/*.c))))
-SOOBJS   = $(patsubst %.o, %.lo, $(OBJS))
-MODULES  = $(patsubst src/modules/module_%.c, modules/%.so, $(sort $(wildcard src/modules/module_*.c)))
-HEADERS  = $(wildcard src/kuroko/*.h)
-TOOLS    = $(patsubst tools/%.c, krk-%, $(sort $(wildcard tools/*.c)))
-GENMODS  = modules/codecs/sbencs.krk modules/codecs/dbdata.krk
-BIN_OBJS = libkuroko.a
-
 # These are used by the install target. We call the local kuroko to get the
 # version string to use for the final library, so, uh, probably don't
 # try to do that in a cross-compile environment...
-VERSION  = $(shell ./kuroko --version | sed 's/.* //')
-SONAME   = libkuroko-$(VERSION).so
-KRKMODS  = $(wildcard modules/*.krk modules/*/*.krk modules/*/*/*.krk)
+VERSION  = $(shell ./Epiost --version | sed 's/.* //')
+SONAME   = libEpiost-$(VERSION).so
+KRKMODS  = $(wildcard modules/*.est modules/*/*.est modules/*/*/*.est)
 
 all: ${TARGET} ${MODULES} ${TOOLS} ${GENMODS}
 

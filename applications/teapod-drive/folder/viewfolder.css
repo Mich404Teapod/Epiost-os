@@ -1,0 +1,90 @@
+.view {
+  position: absolute;
+  background-color: black;
+  border: 2px solid white;
+  z-index: 100;
+  height: 80%;
+  width: 50%;
+  top: 10%;
+  left: 30%;
+  transform: scale(0);
+  border-radius: 3%;
+  border-top-left-radius: 2%;
+  border-top-right-radius: 2%;
+}
+.view.active {
+  transform: scale(1);
+  transition: transform 300ms ease-in-out;
+}
+.viewheader {
+  /* border: 2px solid white; */
+  /* color: black; */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1%;
+  height: 5%;
+  align-items: center;
+  border-radius: 9%;
+  background-color: #ffcf66;
+}
+
+.viewheader > .foldername {
+  /* border: 2px solid white; */
+  color: black;
+  font-size: large;
+  font-weight: bolder;
+}
+
+.viewheader > .closebtn {
+  position: fixed;
+  /* border: 2px solid red; */
+  color: black;
+  font-size: large;
+  font-weight: bolder;
+  left: 95%;
+  cursor: pointer;
+  padding: 0.3%;
+}
+
+.viewheader > .closebtn:hover {
+  background-color: red;
+  border-radius: 5%;
+  transform: scale(1.2);
+}
+
+.breadcrum {
+  padding-left: 2%;
+  padding-top: 1%;
+  /* border: 2px solid white; */
+  color: white;
+  margin-bottom: 2%;
+  height: 6%;
+  display: flex;
+  border-radius: 2%;
+}
+
+.breadcrum .breadcrum-item {
+  /* border: 2px solid white; */
+  color: black;
+  font-weight: bold;
+  margin-right: 2%;
+  padding: 0.7%;
+  background-color: #ff7109;
+  cursor: pointer;
+  border-radius: 2%;
+}
+
+.breadcrum .breadcrum-item:hover {
+  transform: scale(1.2);
+}
+
+.view-container {
+  /* border: 2px solid white; */
+  color: white;
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: start;
+  height: 85%;
+  width: 100%;
+}

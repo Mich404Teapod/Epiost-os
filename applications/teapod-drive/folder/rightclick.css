@@ -1,0 +1,40 @@
+body {
+  margin: 0px;
+  font-family: Georgia;
+}
+#folder-context-menu,
+#file-context-menu {
+  position: fixed;
+  z-index: 10000;
+  width: 150px;
+  background: #1b1a1a;
+  border-radius: 5px;
+  transform: scale(0);
+  transform-origin: top left;
+}
+#folder-context-menu.active,
+#file-context-menu.active {
+  transform: scale(2);
+  transition: transform 300ms ease-in-out;
+}
+#folder-context-menu .item,
+#file-context-menu .item {
+  padding: 8px 10px;
+  font-size: 15px;
+  color: #eee;
+  cursor: pointer;
+}
+#folder-context-menu .item:hover,
+#file-context-menu .item:hover {
+  background: #555;
+}
+#folder-context-menu .item i,
+#file-context-menu .item i {
+  display: inline-block;
+  margin-right: 5px;
+}
+#folder-context-menu hr,
+#file-context-menu hr {
+  margin: 2px 0px;
+  border-color: #555;
+}

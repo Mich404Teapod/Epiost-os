@@ -1,0 +1,26 @@
+.file {
+  position: relative;
+  /* background-color: yellow; */
+  /* border: 1px solid white; */
+  height: 15%;
+  width: 10%;
+  margin: 2%;
+}
+
+.file .fileimg {
+  /* border: 1px solid white; */
+  height: 60%;
+  background-image: url("file.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.file .filename {
+  /* position: relative; */
+  /* border: 1px solid white; */
+  height: 28%;
+  font-size: small;
+  text-align: center;
+  color: white;
+}

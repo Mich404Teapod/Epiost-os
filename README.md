@@ -5,6 +5,7 @@ edit this please !
 <details><summary>important !<i>expand</i></summary>
   **how to make this ?**:
     do not modify README.md
-    edit main/main.c
-    add a new files in "latex" folder
+    <br>edit main/main.c
+    <br>add a new files .tex in "latex" folder
  </details>
+do not modify other
